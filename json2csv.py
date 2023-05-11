@@ -17,6 +17,10 @@ def get_args(argv):
 			input = argv
 		elif opt == '-o':
 			output = argv
+	if input == '':
+		input = './'
+	if output == '':
+		output = './'
 	return input, output
 
 #reads a json file and returns a json dictionary
@@ -50,13 +54,7 @@ def cleanData(data):
 if __name__ == '__main__':
 	print("Running")
 	argv = sys.argv[1:]
-	#input, output = get_args(argv)
-	input = 'C:/Users/Taite/Desktop/CapstoneFiles/gcp_files/mlab/'
-	output = 'C:/Users/Taite/Desktop/CapstoneFiles/gcp_files/'
-	if input == '':
-		input = './'
-	if output == '':
-		output = './'
+	input, output = get_args(argv)
 	files = os.listdir(input)
 	ndt5Array = []
 	ndt7Array = []

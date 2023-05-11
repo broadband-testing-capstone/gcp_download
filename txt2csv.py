@@ -18,6 +18,7 @@ def get_args(argv):
 if __name__ == '__main__':
 	argv = sys.argv[1:]
 	input, output = get_args(argv)
-	if input == '' or output == '':
-		print('txt2csv.py -i [input file] -o [output file]')
-		sys.exit()
+	if input == '':
+		input = './'
+	if output == '':
+		output = './'
