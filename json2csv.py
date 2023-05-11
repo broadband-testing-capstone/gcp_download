@@ -52,7 +52,7 @@ def cleanData(data):
 	return data
 
 if __name__ == '__main__':
-	print("Running")
+	print("Running json2csv.py")
 	argv = sys.argv[1:]
 	input, output = get_args(argv)
 	files = os.listdir(input)
