@@ -1,5 +1,8 @@
 # gcp_download
-## Steps:
+## About 
+Included are two scripts for downloading internet tests data from google cloud platform and converting it into a csv files. json2csv.py is for Murakami running ndt5, ndt7, and ookla tests. txt2csv.py is for Netrics running ndt7 and ookla tests. 
+
+## Instructions:
 1. Open google cloud shell inside gcp
 2. Run the following command:
 ```gsutil -m cp "gs://[bucket name]/*" [download location] ```
