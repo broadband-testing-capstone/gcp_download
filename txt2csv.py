@@ -84,13 +84,19 @@ if __name__ == '__main__':
 	ooklaArray = []
 	for file in files:
 		if file.endswith(".txt") & file.startswith("ndt7"):
-			joined = os.path.join(input, file)
-			txtData = parseTxt(joined, 'ndt7')
-			ndt7Array.append(txtData)
+			try:
+				joined = os.path.join(input, file)
+				txtData = parseTxt(joined, 'ndt7')
+				ndt7Array.append(txtData)
+			except:
+				continue
 		elif file.endswith(".txt") & file.startswith("ookla"):
-			joined = os.path.join(input, file)
-			txtData = parseTxt(joined, 'ookla')
-			ooklaArray.append(txtData)
+			try: 
+				joined = os.path.join(input, file)
+				txtData = parseTxt(joined, 'ookla')
+				ooklaArray.append(txtData)
+			except:
+				continue
 	writeCSV(output, 'ndt7.csv', ndt7Array)
 	writeCSV(output, 'ookla.csv', ooklaArray)
 	print("Done")
